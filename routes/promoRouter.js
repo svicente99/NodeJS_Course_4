@@ -22,7 +22,6 @@ promotionRouter.route('/')
 	.post((req, res, next) => {
 		Promotions.create(req.body)
 		.then((promotion) => {
-			console.log("Promotion created: ", promotion);
 			res.statusCode = 200;
 			res.setHeader('Content-Type', 'application/json');
 			res.json(promotion);
@@ -37,7 +36,6 @@ promotionRouter.route('/')
 	.delete((req, res, next) => {
 		Promotions.remove({})
 		.then((resp) => {
-			console.log("Promotions removed");
 			res.statusCode = 200;
 			res.setHeader('Content-Type', 'application/json');
 			res.json(resp);
@@ -66,6 +64,11 @@ promotionRouter.route('/:promotionID')
 	  	res.end('POST operation not supported on /promotions/'+ req.params.promotionID);
 	})
 	.put((req, res, next) => {
+		console.log("Updating data to "+req.params.promotionID);
+		/* I put this debug message to show the real price stored in db. 
+           Because in my Ubuntu installation, the browser doesn't show decimals with dot */
+		if(req.body.price!=null)
+   		  console.log("(this is the price = "+req.body.price+")");
 		Promotions.findByIdAndUpdate(req.params.promotionID, {
 			$set: req.body
 		}, { new: true })
@@ -73,7 +76,6 @@ promotionRouter.route('/:promotionID')
 			res.statusCode = 200;
 			res.setHeader('Content-Type', 'application/json');
 			res.json(promotion);
-	  		console.log('Updating the promotion: ' + req.params.promotionID + '\n');
 		},
 		 (err) => next(err))
 		.catch( (err) => next(err) );
