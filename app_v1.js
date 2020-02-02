@@ -1,14 +1,3 @@
-const mongoose = require("mongoose");
-
-const Dishes = require("./models/dishes");
-
-const url = 'mongodb://localhost:27017/conFusion';
-const connect = mongoose.connect(url);
-
-connect.then((db) => {
-    console.log("Connected correctly to server");
-}, (err) => { console.log(err); });
-
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
