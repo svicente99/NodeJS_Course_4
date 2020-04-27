@@ -15,7 +15,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var userRouter = require('./routes/users');
+var userRouter = require('./routes/userRouter');
 var dishRouter = require('./routes/dishRouter');
 var leadRouter = require('./routes/leaderRouter');
 var promoRouter = require('./routes/promoRouter');
@@ -63,6 +63,7 @@ app.use('/leaders',leadRouter);
 app.use('/imageUpload',uploadRouter);
 
 app.use(cookieParser('12345-67890-09876-54321'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
