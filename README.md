@@ -1,7 +1,7 @@
-# NodeJS_course_2
-Peer assigment #2 to NodeJS Coursera - REST API with Express, MongoDB and Mongoose
+# NodeJS_course_4
+Peer assigment #4 to NodeJS Coursera - Backend As A Service
 
-See "instructions2.html" to better understanding of this exercise.
+See "instructions4.html" to better understanding of this exercise.
 
 ----
 
