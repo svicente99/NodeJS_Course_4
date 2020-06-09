@@ -1,0 +1,46 @@
+0) without authorization (Bearer Token)			==> OK.
+
+1) GET - list all favorites 
+		 [ showing dishes and users contents ]
+
+		 a) if user has saved at least one		==> OK.
+         b) if user hasn't saved				==> OK.
+
+   /dishID - list only this dish favorite
+
+		 a) if user has already saved it		==> OK.
+         b) if user hasn't saved yet			==> OK.
+
+2) POST - insert all favorites in body
+		 [ showing dishes and users ids ]
+
+		 a) if user hasn't created one favorite	==> OK.   (except if a dishID is invalid...)
+         b) if user has created at least one	==> OK.  (checked if dish id is valid)
+		 c) if user has added a new one favorite => OK.  (checked if dish id is valid or is already inserted)
+
+   /dishID - insert only this dish favorite
+
+		 a) if user has already saved it		==> OK.
+         b) if user hasn't saved yet			==> OK.	 (checked if dish id is valid)
+
+3) PUT - not allowed in any situation
+
+4) DELETE - delete all favorites
+
+		 a) if user has saved at least one		==> OK.
+         b) if user hasn't saved				==> OK.
+
+   /dishID - delete only this dish favorite
+
+		 a) if user has already saved it		==> OK.
+         b) if user hasn't saved yet			==> OK.
+
+BODY POST
+[
+	{"_id": "5eda74aef27c682319c68c90"},  //egg
+	{"_id": "5eda7388f27c682319c68c8f"}, 
+	{"_id": "5eb8c695ba82645511befce0"},
+	{"_id": "5eb8c695ba82645233322220"},
+	{"_id": "5eb8c695ba82645511332330"},
+	{"_id": "5eda74d9f27c682319c68c91"}	  //orange juice
+]

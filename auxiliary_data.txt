@@ -1,0 +1,81 @@
+user login:
+/POST
+	{
+	"username": "sergiovicente", "password": "svicente99"
+	}
+
+	{
+	"username": "mangenta99", "password": "password"
+	}
+
+
+
+bearer token
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTVhZTYxN2IyMzQ0ZTRiMzk0NmRmYWUiLCJpYXQiOjE1ODkxNjc1MzQsImV4cCI6MTU4OTE3MTEzNH0.8IPmXmHjQ1B10-k7alLaosa1zNmOeH8OAwFBUE2DX_o
+
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTVhZTYxN2IyMzQ0ZTRiMzk0NmRmYWUiLCJpYXQiOjE1ODkzNDI3MTQsImV4cCI6MTU4OTM0NjMxNH0.gfLNwWZ0pZzAInGxshajA3aADfUIK_U-gpxN8uuO7-o------------------------
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTVhZTYxN2IyMzQ0ZTRiMzk0NmRmYWUiLCJpYXQiOjE1ODk2MDEyOTEsImV4cCI6MTU4OTYwNDg5MX0.CeBD6VApwWPYmPpsALHYmpUA6a5BzVUF1d5pdSPEh_Y
+
+dishes add
+/POST
+{
+       "label": "pizza",
+       "featured": "true",
+       "name": "Veggie Pizza 5",
+       "image": "images/veggie_pizza5.png",
+       "category": "pastas",
+       "price": 555,
+       "description": "Vegetarian food.",
+       "comments": []
+}
+
+=====> "_id": "5eb8c695ba82645511befce0"
+
+{
+    "name": "Vadonut",
+    "image": "images/vadonut.png",
+    "category": "appetizer",
+    "label": "New",
+    "price": "1.99",
+    "featured": "false",
+    "description": "A quintessential ConFusion experience, is it a vada or is it a donut?",
+    "comments": []
+}
+
+=====> "_id": "5eb8c829ba82645511befceb"
+
+{
+
+    "label": "Egg",
+    "featured": "false",
+    "_id": "5ebe17cd0a18a158f7f2957a",
+    "name": "Omelette",
+    "image": "images/omelete.png",
+    "category": "appetizer",
+    "price": 299,
+    "description": "My omelette",
+    "comments": [ ],
+    "createdAt": "2020-05-15T04:17:17.398Z",
+    "updatedAt": "2020-05-15T04:17:17.398Z",
+    "__v": 0
+
+}
+
+=====> "_id": "5ebe17cd0a18a158f7f2957a"
+
+
+
+[{"_id":"5eb8c695ba82645511befce0"}, {"_id":"5eb8c829ba82645511befceb"}]
+
+
+
+
+magenta99
+---------
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTQzODg2YmY1ZDViZTI3NGI0MWUxODEiLCJpYXQiOjE1ODk2MDE5NzksImV4cCI6MTU4OTYwNTU3OX0.vasc91SRfKbEnPV7udwxaZyuMftxzuhGCq77yUYvTfg
+
+sergiovicente99
+---------------
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTVhZTYxN2IyMzQ0ZTRiMzk0NmRmYWUiLCJpYXQiOjE1ODk2MDI1MDcsImV4cCI6MTU4OTYwNjEwN30.uc6ZK-JXlp8KVq9djX1PnRrvhIi4Z9DAYI007SeNc_w

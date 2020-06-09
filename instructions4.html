@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2020-06-09T14:05:38.019830687"/>
+	<meta name="created" content="00:00:00">
+	<meta name="changed" content="2020-05-16T01:24:14.155615956">
+	<meta name="created" content="2020-05-16T00:12:57.080515256">
+	<meta name="changed" content="2020-05-16T00:24:41.885527912">
+	<style type="text/css">
+		@page { margin: 2cm }
+		p { margin-bottom: 0.25cm; line-height: 120% }
+		a:link { so-language: zxx }
+		code.cjk { font-family: "Nimbus Mono L", monospace }
+	</style>
+</head>
+<body lang="pt-BR" dir="ltr">
+<p>In this assignment, you will be extending the router to support
+the ability to save and retrieve a list of favorite dishes by each of
+the registered users. All registered users in the system should have
+the ability to save any dish as their favorite dish, retrieve all
+their favorite dishes and remove one or all their favorite dishes.</p>
+<p style="margin-bottom: 0cm">Step-By-Step Assignment Instructions</p>
+<p style="margin-bottom: 0cm"><br/>
+
+</p>
+<div id="instructions-container-1589594487426" dir="ltr">
+	<p><strong>Assignment Overview</strong></p>
+	<p>At the end of this assignment, your should have completed the
+	following:</p>
+	<ul>
+		<li/>
+<p style="margin-bottom: 0cm">Allowed users to select a dish
+		as their favorite, and add it to the list of favorites that are
+		saved on the server.</p>
+		<li/>
+<p style="margin-bottom: 0cm">Allowed users to retrieve the
+		list of their favorite dishes from the server</p>
+		<li/>
+<p>Delete one or all of their favorite dishes from their
+		favorites list on the server.</p>
+	</ul>
+	<p><strong>Assignment Resources</strong></p>
+	<p><a href="https://d3c33hcgiwev3.cloudfront.net/_811ae978a255224eeecc8809c00fa9b0_db.json?Expires=1589760000&amp;Signature=gtBSTO51Ng1SM6ENiuj7qt~B13ofvQ7azVQF~jpWvH6ifziCNE0eP8s1fMHvKpp-jf8YXkLqjM6GNbAzy~qkW3dbip95LL2b1zTCf4qTzhIxWmFRnIecs205njxWXQLZoRTGOk4If2dGWXPqKpgqIahxpuc2gFIDPiD2BMRkvuU_&amp;Key-Pair-Id=APKAJLTNE6QMUY6HBC5A" target="_blank">db.json</a></p>
+	<p><strong>Assignment Requirements</strong></p>
+	<p>In this assignment, you will be supporting a new route
+	<a href="https://localhost:3443/favorites," target="_blank">https://localhost:3443/favorites,</a>
+	where the users can do a GET to retrieve all their favorite dishes,
+	a POST to add a list of dishes to their favorites, and a DELETE to
+	delete the list of their favorites. In addition, you will support
+	the new route <a href="https://localhost:3443/favorites/:dishId" target="_blank">https://localhost:3443/favorites/:dishId</a>
+	where the users can issue a POST request to add the dish to their
+	list of favorite dishes, and a DELETE request to delete the specific
+	dish from the list of their favorite dishes.</p>
+	<p>This assignment consists of the following three tasks:</p>
+	<p><strong>Task 1</strong></p>
+	<p>In this task you will be implementing a new Mongoose schema named
+	<em>favoriteSchema</em>, and a model named <em>Favorites</em> in the
+	file named f<em>avorite.js</em> in the <em>models</em> folder. This
+	schema should take advantage of the mongoose population support to
+	populate the information about the user and the list of dishes when
+	the user does a GET operation. <span style="background: #ffff00">===&gt;
+	OK √</span><code class="western"> </code>
+	</p>
+	<p><strong>Task 2</strong></p>
+	<p>In this task, you will implement the Express router() for the
+	'/favorites' URI such that you support GET, POST and DELETE
+	operations</p>
+	<ul>
+		<li/>
+<p style="margin-bottom: 0cm">When the user does a GET
+		operation on '/favorites', you will populate the user information
+		and the dishes information before returning the favorites to the
+		user. <span style="background: #ffff00">===&gt; OK √</span></p>
+		<li/>
+<p style="margin-bottom: 0cm">When the user does a POST
+		operation on '/favorites' by including [{&quot;_id&quot;:&quot;dish
+		ObjectId&quot;}, . . ., {&quot;_id&quot;:&quot;dish ObjectId&quot;}]
+		in the body of the message, you will (a) create a favorite document
+		if such a document corresponding to this user does not already
+		exist in the system,<span style="background: #ffff00">===&gt; OK
+		√</span><br/>
+(b) add the dishes specified in the body of the
+		message to the list of favorite dishes for the user, if the dishes
+		do not already exists in the list of favorites. <span style="background: #ffff00">===&gt;
+		OK √</span></p>
+		<li/>
+<p style="margin-bottom: 0cm">When the user performs a DELETE
+		operation on '/favorites', you will delete the list of favorites
+		corresponding to the user, by deleting the favorite document
+		corresponding to this user from the collection. <span style="background: #ffff00">===&gt;
+		OK √</span></p>
+		<li/>
+<p style="margin-bottom: 0cm">When the user performs a POST
+		operation on '/favorites/:dishId', then you will add the specified
+		dish to the list of the user's list of favorite dishes, if the dish
+		is not already in the list of favorite dishes. <span style="background: #ffff00">===&gt;
+		OK √</span></p>
+		<li/>
+<p>When the user performs a DELETE operation on
+		'/favorites/:dishId', then you will remove the specified dish from
+		the list of the user's list of favorite dishes. <span style="background: #ffff00">===&gt;
+		OK √</span></p>
+	</ul>
+	<p><strong>Task 3</strong></p>
+	<p>You will update app.js to support the new '/favorites' route. 
+	<span style="background: #ffff00">===&gt; OK √</span></p>
+</div>
+<p style="margin-bottom: 0cm">Review criteria</p>
+<div id="instructions-container-1589594487440" dir="ltr">
+	<p>Your assignment will be graded on the basis of the following
+	review criteria:</p>
+	<ul>
+		<li/>
+<p style="margin-bottom: 0cm">A new favoriteSchema and
+		Favorites model has been correctly implemented to take advantage of
+		Mongoose Population support to track the users and the list of
+		favorite dishes using their ObjectIds in the favoriteSchema and
+		Favorites model.</p>
+		<li/>
+<p style="margin-bottom: 0cm">The GET, POST and DELETE
+		operations are well supported as per the specifications above</p>
+		<li/>
+<p>The app.js has been updated to support the new route.</p>
+	</ul>
+</div>
+<p style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+</body>
+</html>
